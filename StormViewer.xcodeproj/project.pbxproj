@@ -20,6 +20,7 @@
 		76195D6C2C6AE56C00687F2D /* img04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76195D642C6AE56C00687F2D /* img04.jpg */; };
 		76195D6D2C6AE56C00687F2D /* img06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76195D652C6AE56C00687F2D /* img06.jpg */; };
 		76195D6E2C6AE56C00687F2D /* img07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76195D662C6AE56C00687F2D /* img07.jpg */; };
+		76195D702C6C006E00687F2D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76195D6F2C6C006E00687F2D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		76195D642C6AE56C00687F2D /* img04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img04.jpg; sourceTree = "<group>"; };
 		76195D652C6AE56C00687F2D /* img06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img06.jpg; sourceTree = "<group>"; };
 		76195D662C6AE56C00687F2D /* img07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img07.jpg; sourceTree = "<group>"; };
+		76195D6F2C6C006E00687F2D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				76195D392C6ADD0700687F2D /* AppDelegate.swift */,
 				76195D3B2C6ADD0700687F2D /* SceneDelegate.swift */,
 				76195D3D2C6ADD0700687F2D /* ViewController.swift */,
+				76195D6F2C6C006E00687F2D /* DetailViewController.swift */,
 				76195D422C6ADD0E00687F2D /* Assets.xcassets */,
 				76195D442C6ADD0E00687F2D /* LaunchScreen.storyboard */,
 				76195D5E2C6AE56C00687F2D /* Content */,
@@ -178,6 +181,7 @@
 				76195D3E2C6ADD0700687F2D /* ViewController.swift in Sources */,
 				76195D3A2C6ADD0700687F2D /* AppDelegate.swift in Sources */,
 				76195D3C2C6ADD0700687F2D /* SceneDelegate.swift in Sources */,
+				76195D702C6C006E00687F2D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +332,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +364,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
