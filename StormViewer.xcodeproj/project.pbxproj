@@ -328,6 +328,8 @@
 				DEVELOPMENT_TEAM = T7FAAY3JV4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StormViewer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save photos you like";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -360,6 +362,8 @@
 				DEVELOPMENT_TEAM = T7FAAY3JV4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StormViewer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save photos you like";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

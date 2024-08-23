@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import MessageUI
 
 class ViewController: UIViewController {
+    
+    var pictures = [String]()
     
     private lazy var pictureTableView: UITableView = {
        let tableView = UITableView()
@@ -17,8 +20,6 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Picture")
         return tableView
     }()
-    
-    var pictures = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,6 @@ class ViewController: UIViewController {
                 pictures.append(item)
             }
         }
-        
-        print(pictures)
     }
     
     func setupLayout() {
@@ -58,6 +57,13 @@ class ViewController: UIViewController {
     func setupNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Storm Viewer"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendTapped))
+    }
+    
+    @objc func recommendTapped() {
+        let viewController = UIActivityViewController(activityItems: ["Hey, download this app!"], applicationActivities: [])
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
 
 }
@@ -66,6 +72,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
+        cell.textLabel?.font = .systemFont(ofSize: 16)
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -77,8 +84,10 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let detailViewController = DetailViewController()
         detailViewController.selectedImage = pictures[indexPath.row]
+        detailViewController.title = "Picture \(indexPath.row + 1) of \(pictures.count)"
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

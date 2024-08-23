@@ -9,7 +9,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
+    
     var selectedImage: String?
+    let viewController = ViewController()
+    var index: Int = 1
+    
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: selectedImage ?? ""))
@@ -41,8 +46,25 @@ class DetailViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        navigationItem.title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+    }
+    
+    @objc func shareTapped() {
+        
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No image found")
+            return
+        }
+        
+        guard let name = selectedImage else {
+            print("No name found")
+            return
+        }
+        
+        let viewController = UIActivityViewController(activityItems: [image, name], applicationActivities: [])
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
 
 }
